@@ -1,80 +1,97 @@
-export const data ={
-    products :[
-        {
-            name: "NIke",
-            slug: "Free shirt",      
-            image: "/images/shirt.jpg",
-            banner: "..",
-            price: 12,
-            brand: "Nike",
-            description: "Apopular shirt",
-            category: "shirt",
-            rating: 3.4,
-            numReviews: 4,
-            countInStock : 10,
-            
-        
-        },
-        {
-            name: "NIke",
-            slug: "Free shirt",      
-            image: "/images/shirt.jpg",
-            banner: "..",
-            price: 12,
-            brand: "Nike",
-            description: "Apopular shirt",
-            category: "shirt",
-            rating: 3.4,
-            numReviews: 4,
-            countInStock : 10,
-            
-        
-        },
-        {
-            name: "NIke",
-            slug: "Free shirt",      
-            image: "/images/shirt.jpg",
-            banner: "..",
-            price: 12,
-            brand: "Nike",
-            description: "Apopular shirt",
-            category: "shirt",
-            rating: 3.4,
-            numReviews: 4,
-            countInStock : 10,
-            
-        
-        },
-        {
-            name: "NIke",
-            slug: "Free shirt",      
-            image: "/images/shirt.jpg",
-            banner: "..",
-            price: 12,
-            brand: "Nike",
-            description: "Apopular shirt",
-            category: "shirt",
-            rating: 3.4,
-            numReviews: 4,
-            countInStock : 10,
-            
-        
-        },
-        {
-            name: "NIke",
-            slug: "Free shirt",      
-            image: "/images/shirt.jpg",
-            banner: "..",
-            price: 12,
-            brand: "Nike",
-            description: "Apopular shirt",
-            category: "shirt",
-            rating: 3.4,
-            numReviews: 4,
-            countInStock : 10,
-            
-        
-        }
+import bcrypt from 'bcryptjs'
 
-    ]
+export const data = {
+  users: [
+    {
+      name: 'John',
+      email: 'admin@example.com',
+      password: bcrypt.hashSync('123456'),
+      isAdmin: true,
+    },
+    {
+      name: 'Jane',
+      email: 'user@example.com',
+      password: bcrypt.hashSync('123456'),
+      isAdmin: false,
+    },
+  ],
+  products: [
+    {
+        name: "Nike",
+        slug: "Nikeshirt",
+        category: "shirt",
+        image: "/images/images.jpg",
+        price: 11,
+        brand: "Nike",
+        rating: 3.4,
+        numReviews: 50,
+        countInStock: 10,
+        description: "Nike shirt",
+        isFeatured: true,
+       
+    },
+    {
+      name: 'Fit Shirt',
+      slug: 'fit-shirt',
+      category: 'Shirts',
+      image: '/images/images.jpg',
+      price: 80,
+      brand: 'Adidas',
+      rating: 3.2,
+      numReviews: 10,
+      countInStock: 20,
+      description: 'A popular shirt',
+      isFeatured: true,
+      banner: '/images/banner2.jpg',
+    },
+    {
+      name: 'Slim Shirt',
+      slug: 'slim-shirt',
+      category: 'Shirts',
+      image: '/images/shirt.jpg',
+      price: 90,
+      brand: 'Raymond',
+      rating: 4.5,
+      numReviews: 3,
+      countInStock: 20,
+      description: 'A popular shirt',
+    },
+    {
+      name: 'Golf Pants',
+      slug: 'golf-pants',
+      category: 'Pants',
+      image: '/images/images.jpg',
+      price: 90,
+      brand: 'Oliver',
+      rating: 2.9,
+      numReviews: 13,
+      countInStock: 20,
+      description: 'Smart looking pants',
+    },
+    {
+      name: 'Fit Pants',
+      slug: 'fit-pants',
+      category: 'Pants',
+      image: '/images/images.jpg',
+      price: 95,
+      brand: 'Zara',
+      rating: 3.5,
+      numReviews: 7,
+      countInStock: 20,
+      description: 'A popular pants',
+    },
+    {
+      name: 'Classic Pants',
+      slug: 'classic-pants',
+      category: 'Pants',
+      image: '/images/shirt.jpg',
+      price: 75,
+      brand: 'Casely',
+      rating: 2.4,
+      numReviews: 14,
+      countInStock: 20,
+      description: 'A popular pants',
+    },
+  ],
 }
+
