@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import './globals.css'
 import Header from '@/components/header/header'
+import Provider from '@/components/provider'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -17,13 +18,16 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}><div className='min-h-screen flex flex-col'>
+      <body className={inter.className}>
+        <Provider>
+        <div className='min-h-screen flex flex-col'>
         <Header/>
         {children}
         <footer className='footer footer-center p-4 bg-base-300 text-base-content'>
           <p>Copyright @2024-All right reserved Shopify</p>
         </footer>
-        </div></body>
+        </div>
+        </Provider></body>
     </html>
   )
 }

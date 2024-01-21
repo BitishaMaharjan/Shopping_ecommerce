@@ -28,6 +28,7 @@ export const data = {
         countInStock: 10,
         description: "Nike shirt",
         isFeatured: true,
+        banner: '/images/banner2.jpg',
        
     },
     {
@@ -79,6 +80,7 @@ export const data = {
       numReviews: 7,
       countInStock: 20,
       description: 'A popular pants',
+      banner: '/images/banner1.jpg',
     },
     {
       name: 'Classic Pants',

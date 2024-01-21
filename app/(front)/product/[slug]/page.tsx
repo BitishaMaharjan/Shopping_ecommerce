@@ -3,13 +3,15 @@ import { data } from "@/lib/data";
 import Link from "next/link";
 import  Image  from "next/image";
 import AddToCart from "@/components/products/AddtoCart";
+import productService from "@/lib/services/ProductService";
+import { convertDocToObj } from "@/lib/utils";
 
-export default function ProductDetails({
+export default async function ProductDetails({
     params
 }:
 {params:{slug : string}}){
     console.log(params)
-    const product = data.products.find((x) => x.slug === params.slug)
+    const product = await productService.getBySlug(params.slug)
     if(!product){
         return <div>Product not found</div>
     }
@@ -53,7 +55,7 @@ export default function ProductDetails({
                 <div className="card-actions justify-center">
                   <AddToCart
                     item={{
-                      ...product,
+                      ...convertDocToObj(product),
                       qty: 0,
                       color: '',
                       size: '',
